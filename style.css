@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&display=swap');
+
+body{
+    background-color: rgb(244, 187, 245);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #F9E795;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    transition: background-color 0.5s ease;
+}
+
+.music{
+    width: 400px;
+    height: 500px;
+    background: #FFBE7B;
+    padding: 20px 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+.song-class{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 60px rgba(255, 26,26 , 0.22);
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+
+    animation: rotate 10s linear infinite;
+    animation-play-state: paused;
+}
+
+.song-class.play{
+    animation-play-state: running;
+}
+#ProgressBar{
+    width: 15vw;
+    background: #5c94ed;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 40px;
+}
+#ProgressBar::-webkit-slider-thumb{
+    background: #f53192;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 5px rgba(255, 26,26 , 0.22);
+}
+.icons{
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons i{
+    cursor: pointer;
+    padding:0 6px;
+    text-align: center;
+}
+
+#heart{
+    font-size: 28px;
+}
+#shuf{
+    font-size: 22px;
+}
+.songname{
+    margin-top: 40px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.current-time{
+    font-size: 14px;
+    margin-right: 8px;
+}
+.song-duration{
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
